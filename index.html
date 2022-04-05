@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">        
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <title id="title-browser">MyFocus Pomodoro</title>
+    </head>
+    <body>
+        <header id="nav-bar">
+            <input type="checkbox" name="btn-drop-menu" id="btn-drop-menu">
+            <nav id="navigation">
+                <ul class="nav-list">
+                    <li class="item-nav"><a href="">MyFocus</a></li>
+                    <li class="item-nav">
+                        <label for="btn-drop-menu" id="btn-drop">
+                            <span></span>
+                        </label>
+                    </li>
+                </ul>
+                <ul class="nav-list">
+                    <li class="item-nav" onclick="showModals('myTasks')">My Tasks</li>
+                    <li class="item-nav" onclick="showModals('addTasks')">Add Task</li>
+                    <li class="item-nav">How To Use?</li>
+                </ul>
+                <ul class="nav-list">
+                    <li class="item-nav">About</li>
+                </ul>
+            </nav>
+        </header>
+        <main id="content">
+            <section id="pomodoro-time">
+                <div id="content-pomo-time">
+                    <svg height="360" width="360">
+                        <circle cx="130" cy="180" r="176"/>
+                    </svg>
+                    <div id="time-title">
+                        <h2 class="title-princ">Pomodoro</h2>
+                        <h3 class="title-secun">Focus on your goal</h3>
+
+                        <h1 id="time-pomodoro"></h1>
+
+                        <div id="time-controler">
+                            <button id="reset-time"></button>
+                            <button id="playpause"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="js/resizeel.js"></script>
+        <script src="js/modals.js"></script>
+        <script src="js/functions.js"></script>
+        <script src="js/pomotimer.js"></script>
+    </body>
+</html>
