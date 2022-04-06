@@ -27,7 +27,7 @@ function timerFunction(param, what) {
       clearInterval(clockSvg);
       seconds = 60;
       svgDash = 0;
-      elSel('#playpause').style.background = "url('media/svg/play.svg') no-repeat center center";
+      elSel('#playpause').style.background = "url('media/svg/btn-play.svg') no-repeat center center";
       elSel('#playpause').setAttribute('onclick', "timerFunction('play')");
       elSel('circle').style.strokeDashoffset = 0;
 
@@ -61,7 +61,7 @@ function timerFunction(param, what) {
         time--;
       }
 
-      elSel('#playpause').style.background = "url('media/svg/pause-outline.svg') no-repeat center center";
+      elSel('#playpause').style.background = "url('media/svg/btn-pause.svg') no-repeat center center";
       elSel('#playpause').setAttribute('onclick', "timerFunction('pause')");
       clock = setInterval(function () {
         seconds--;
@@ -155,7 +155,7 @@ function timerFunction(param, what) {
       console.log('pause time');
       clearInterval(clock);
       clearInterval(clockSvg);
-      elSel('#playpause').style.background = "url('media/svg/play.svg') no-repeat center center";
+      elSel('#playpause').style.background = "url('media/svg/btn-play.svg') no-repeat center center";
       elSel('#playpause').setAttribute('onclick', "timerFunction('play')");
       break;
   }
