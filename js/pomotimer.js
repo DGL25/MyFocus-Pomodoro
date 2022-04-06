@@ -24,9 +24,12 @@ function timerFunction(param, what) {
     case 'reset':
       console.log('reset time');
       clearInterval(clock);
+      clearInterval(clockSvg);
       seconds = 60;
+      svgDash = 0;
       elSel('#playpause').style.background = "url('../media/svg/play.svg') no-repeat center center";
       elSel('#playpause').setAttribute('onclick', "timerFunction('play')");
+      elSel('circle').style.strokeDashoffset = 0;
 
       switch (what) {
         case 'pomodoro':
@@ -58,7 +61,13 @@ function timerFunction(param, what) {
         time--;
       }
 
-      elSel('#playpause').style.background = "url('../media/svg/pause-outline.svg') no-repeat center center";
+      try {
+        elSel('#playpause').style.background = "url('../media/svg/pause-outline.svg') no-repeat center center";
+      } catch (error) {
+        console.log(error);
+        elSel('#playpause').style.background = "#EB5757 url('../media/svg/pause-outline.svg') no-repeat center center";
+      }
+
       elSel('#playpause').setAttribute('onclick', "timerFunction('pause')");
       clock = setInterval(function () {
         seconds--;

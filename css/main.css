@@ -938,6 +938,7 @@
     height: 100%;
     border: 3px solid rgba(0, 0, 0, 0.25);
     border-radius: 50%;
+    z-index: -1;
   }
   #pomodoro-time #content-pomo-time svg {
     position: absolute;
@@ -946,6 +947,7 @@
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+    z-index: -1;
   }
   #pomodoro-time #content-pomo-time svg circle {
     position: relative;
@@ -1015,6 +1017,7 @@
     background-size: cover;
     border: none;
     outline: none;
+    cursor: pointer;
   }
   #pomodoro-time #content-pomo-time #time-title #time-controler button:nth-child(2) {
     background: url("../media/svg/play.svg") no-repeat center center;
