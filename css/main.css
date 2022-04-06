@@ -632,7 +632,7 @@
     cursor: pointer;
   }
   #pomodoro-time #content-pomo-time #time-title #time-controler button:nth-child(2) {
-    background: url("../media/svg/btn-play.svg") no-repeat center center;
+    background: url("../media/svg/play.svg") no-repeat center center;
   }
   #end-time {
     position: absolute;
