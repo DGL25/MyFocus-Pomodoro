@@ -27,7 +27,7 @@ function timerFunction(param, what) {
       clearInterval(clockSvg);
       seconds = 60;
       svgDash = 0;
-      elSel('#playpause').style.background = "url('../media/svg/play.svg') no-repeat center center";
+      elSel('#playpause').style.background = "url('media/svg/play.svg') no-repeat center center";
       elSel('#playpause').setAttribute('onclick', "timerFunction('play')");
       elSel('circle').style.strokeDashoffset = 0;
 
@@ -61,13 +61,7 @@ function timerFunction(param, what) {
         time--;
       }
 
-      try {
-        elSel('#playpause').style.background = "url('../media/svg/pause-outline.svg') no-repeat center center";
-      } catch (error) {
-        console.log(error);
-        elSel('#playpause').style.background = "#EB5757 url('../media/svg/pause-outline.svg') no-repeat center center";
-      }
-
+      elSel('#playpause').style.background = "url('media/svg/pause-outline.svg') no-repeat center center";
       elSel('#playpause').setAttribute('onclick', "timerFunction('pause')");
       clock = setInterval(function () {
         seconds--;
@@ -133,7 +127,7 @@ function timerFunction(param, what) {
             }
           }
 
-          elSel('#playpause').style.background = "url('../media/svg/play.svg') no-repeat center center";
+          elSel('#playpause').style.background = "url('media/svg/play.svg') no-repeat center center";
           elSel('#playpause').setAttribute('onclick', "timerFunction('play')");
         }
 
