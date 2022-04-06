@@ -155,7 +155,7 @@ function timerFunction(param, what) {
       console.log('pause time');
       clearInterval(clock);
       clearInterval(clockSvg);
-      elSel('#playpause').style.background = "url('../media/svg/play.svg') no-repeat center center";
+      elSel('#playpause').style.background = "url('media/svg/play.svg') no-repeat center center";
       elSel('#playpause').setAttribute('onclick', "timerFunction('play')");
       break;
   }
