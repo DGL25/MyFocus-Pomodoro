@@ -127,8 +127,9 @@ function timerFunction(param, what) {
             }
           }
 
-          elSel('#playpause').style.background = "url('media/svg/play.svg') no-repeat center center";
+          elSel('#playpause').style.background = "url('media/svg/btn-play.svg') no-repeat center center";
           elSel('#playpause').setAttribute('onclick', "timerFunction('play')");
+          svgDash = 0;
         }
 
         if (seconds <= 0) {
@@ -142,9 +143,11 @@ function timerFunction(param, what) {
         if (window.innerWidth <= 450 && svgDash <= -955) {
           clearInterval(clockSvg);
           elSel('circle').style.strokeDashoffset = 0;
+          svgDash = 0;
         } else if (window.innerWidth > 450 && svgDash <= -1105) {
           clearInterval(clockSvg);
           elSel('circle').style.strokeDashoffset = 0;
+          svgDash = 0;
         } else {
           elSel('circle').style.strokeDashoffset = svgDash--;
         }
