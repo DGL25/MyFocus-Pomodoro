@@ -208,7 +208,7 @@
 
 * #my-tasks #content-my-tasks #content-tasks-list {
   overflow-y: auto;
-  height: 300px;
+  height: 250px;
 }
 
 * #my-tasks #content-my-tasks #content-tasks-list::-webkit-scrollbar {
