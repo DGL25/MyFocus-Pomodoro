@@ -25,11 +25,13 @@ var modalsStatus = {
   },
   addTasks: {
     showModal: false
-  }
+  },
+  alertAuido: false
 };
 var endTime = modalsStatus.endTime,
     myTasks = modalsStatus.myTasks,
-    addTasks = modalsStatus.addTasks;
+    addTasks = modalsStatus.addTasks,
+    alertAuido = modalsStatus.alertAuido;
 var pomoFocus = endTime.pomoFocus,
     shortBreak = endTime.shortBreak,
     titlesTexts = endTime.titlesTexts;
@@ -37,7 +39,7 @@ var pomoFocus = endTime.pomoFocus,
 var showModals = function showModals(modal) {
   switch (modal) {
     case 'endTime':
-      if (endTime.showModal === false) {
+      if (endTime.showModal === false && alertAuido === false) {
         endTime.showModal = true;
         var sectionEndTime = crEl('section');
         sectionEndTime.id = 'end-time';
@@ -68,9 +70,21 @@ var showModals = function showModals(modal) {
         mainContentEndTime.appendChild(buttonBtnEndTime);
         sectionEndTime.appendChild(mainContentEndTime);
         document.body.appendChild(sectionEndTime);
+        alertAuido = true;
+        var audioAlert = crEl('audio');
+        audioAlert.id = 'audio-alert';
+        audioAlert.setAttribute('autoplay', '');
+        audioAlert.setAttribute('loop', '');
+        var audioPlay = crEl('source');
+        audioPlay.setAttribute('src', 'media/audio/ps1.mp3');
+        audioPlay.setAttribute('type', 'audio/mpeg');
+        audioAlert.appendChild(audioPlay);
+        document.body.appendChild(audioAlert);
       } else {
         document.body.removeChild(elSel('#end-time'));
         endTime.showModal = false;
+        document.body.removeChild(elSel('#audio-alert'));
+        alertAuido = false;
       }
 
       break;

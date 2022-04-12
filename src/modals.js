@@ -20,22 +20,19 @@ let modalsStatus = {
             }
         ]
     },
-    myTasks:{
-        showModal: false
-    },
-    addTasks:{
-        showModal: false
-    }
+    myTasks:{showModal: false},
+    addTasks:{showModal: false},
+    alertAuido: false
 }
 
-const {endTime, myTasks, addTasks} = modalsStatus
+let {endTime, myTasks, addTasks, alertAuido} = modalsStatus
 
 let {pomoFocus, shortBreak, titlesTexts} = endTime
 
 const showModals = (modal) =>{
     switch (modal) {
         case 'endTime':
-            if(endTime.showModal === false){
+            if(endTime.showModal === false && alertAuido === false){
                 endTime.showModal = true
 
                 let sectionEndTime = crEl('section')
@@ -73,8 +70,28 @@ const showModals = (modal) =>{
                 sectionEndTime.appendChild(mainContentEndTime)
 
                 document.body.appendChild(sectionEndTime)
-            }else{document.body.removeChild(elSel('#end-time'));endTime.showModal = false}
 
+                alertAuido = true
+        
+                let audioAlert = crEl('audio')
+                audioAlert.id = 'audio-alert'
+                audioAlert.setAttribute('autoplay', '')
+                audioAlert.setAttribute('loop', '')
+        
+                let audioPlay = crEl('source')
+                audioPlay.setAttribute('src', 'media/audio/ps1.mp3')
+                audioPlay.setAttribute('type', 'audio/mpeg')
+        
+                audioAlert.appendChild(audioPlay)
+        
+                document.body.appendChild(audioAlert)
+            }else{
+                document.body.removeChild(elSel('#end-time'))
+                endTime.showModal = false
+
+                document.body.removeChild(elSel('#audio-alert'))
+                alertAuido = false
+            }
             break;
 
         case 'myTasks':
