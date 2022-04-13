@@ -8,7 +8,12 @@ Olá, este projeto serve para ajudar a se __concentrar, organizar e ter mais pro
 
 #### Adicionando tarefas
 
-Ao abrir a tela de adição de tarefas, o usuário do pomodo consegue fazer as seguintes ações: __Adicionar nova tarefa, editar a tarefa crianda antes de adicionala a lista e excluir a nova tarefa caso mude de ideia.__
+Ao abrir a tela de adição de tarefas, o usuário do pomodo consegue fazer as seguintes ações: 
+
+* Adicionar nova tarefa (Cria um campo de texto para descrição da tarefa)
+* Editar nova tarefa (Permite editar a terefa criada anteriormente)
+* Excluír tarefa (Permite remover a nova tarefa crianda anteriormente)
+
 Para que as tarefas sejam adicionadas a sua lista de tarefas é simples, basta apenas fechar a tela de adição e pronto, suas tarefas já estão adicionadas a sua lista.
 
 #### Minhas tarefas
@@ -25,6 +30,6 @@ São elas:
 
 ## Tecnologias utilizadas
 
-Neste projeto usei __HTML5, CSS3__ porém __SASS__ e JavaScript. Para que este projeto não fosse em vão e acabasse não funcionado em alguns navegadores, utilizei o __BABEL__ para a transpilação de código javascript.
+Neste projeto usei __HTML5, CSS3__ porém __SASS__ e __JavaScript__. Para que este projeto não fosse em vão e acabasse não funcionado em alguns navegadores, utilizei o __BABEL__ para a transpilação de código javascript.
 
 Confira o [MyFocus Pomodoro](https://dgl25.github.io/MyFocus-Pomodoro/) e obrigado pela sua atenção.
