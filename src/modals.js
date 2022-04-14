@@ -79,7 +79,7 @@ const showModals = (modal) =>{
                 audioAlert.setAttribute('loop', '')
         
                 let audioPlay = crEl('source')
-                audioPlay.setAttribute('src', 'media/audio/ps1.mp3')
+                audioPlay.setAttribute('src', 'media/audio/alarme.mp3')
                 audioPlay.setAttribute('type', 'audio/mpeg')
         
                 audioAlert.appendChild(audioPlay)
